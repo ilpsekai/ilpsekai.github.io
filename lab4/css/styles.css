@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0;
+    background: #9784dddf;
+    display: grid;
+    grid-template-columns: [left] 20px [main] 1fr [end] 20px [right];
+    grid-template-rows: [header] auto [main] auto [aside] auto[footer] auto [bottom];
+}
+/* ナビゲーション */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav ul {
+    display: flex;
+    background: rgba(255,255,255,.7);
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+nav li {
+    text-align: center;
+    padding: 10px 10px;
+    width: auto;
+    height: 40px;
+}
+nav img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.menubutton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: black;
+    cursor: pointer;
+    z-index: 100;
+}
+.menubutton i {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 5px;
+    background: white;
+    transition: all .5s;
+}
+.menubutton i:first-child {
+    top: 10px;
+}
+.menubutton i:nth-child(2) {
+    top: 50%;
+}
+.menubutton i:last-child {
+    top: 30px;
+}
+.menubutton.open i:first-child {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.menubutton.open i:nth-child(2) {
+    opacity: 0;
+}
+.menubutton.open i:last-child {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.menu {
+    position: fixed;
+    top: 40px;
+    right: -100%;
+    width: 20%;
+    height: 100vh;
+    background: white;
+    transition: all .5s;
+    opacity: .9;
+}
+.menu.open {
+    right: 0;
+}
+.menu ul {
+    margin: 40px 0 0 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: column;
+}
+.menu li {
+    padding: 5px 0;
+    text-align: center;
+    margin-right: -20px;
+    opacity: 0;
+    transition: all .5s;
+}
+.menu.open li {
+    margin-right: 0;
+    opacity: 1;
+    transition: all .3s .3s;
+}
+.menu.open li:first-child {
+    transition-delay: .5s;
+}
+.menu.open li:nth-child(2) {
+    transition-delay: .7s;
+}
+.menu.open li:hover {
+    background: black;
+    color: white;
+}
+.about {
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 55vh;
+    transition: all .5s;
+}
+.about.open {
+    right: 0;
+}
+.about img {
+    display: block;
+    width: 100%;
+}
+.about p {
+    text-align: center;
+    color: black;
+}
+/* メイン */
+.chat {
+    position: fixed;
+    left: 0;
+    bottom: -120px;
+    width: 100%;
+    height: 160px;
+    transition: all .5s;
+    z-index: 100;
+}
+.chat.open {
+    bottom: 0;
+}
+.chatbutton {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    background: #754fd6df;
+    color: white;
+    cursor: pointer;
+    transition: all 1s;
+}
+.chatbutton i {
+    display: block;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 30px;
+    height: 12.5%;
+    background: white;
+    transition: all .5s;
+}
+.chatbutton i:first-child {
+    top: 50%;
+    transform: translate(90%,50%) rotate(45deg);
+}
+.chatbutton i:last-child {
+    top: 50%;
+    transform: translate(30%,50%) rotate(-45deg);
+}
+.chatbutton.open i:first-child {
+    top: 50%;
+    transform: translate(30%,50%) rotate(45deg);
+}
+.chatbutton.open i:last-child {
+    top: 50%;
+    transform: translate(90%,50%) rotate(-45deg);
+}
+.message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background: #754fd6df;
+    transition: all .5s;
+}
+.message.open {
+    bottom: 0;
+}
+.post {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+}
+.submit {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    width: 5%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+}
+.tweet {
+    position: fixed;
+    top: 70px;
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+    background: #9784ddfa;
+    border: solid 2px #144668;
+    border-radius: 10px;
+}
+.tweet h2 {
+    padding: 10px 0;
+    color: #144668;
+    border-bottom: solid 2px;
+    text-align: center;
+    margin-top: 0;
+}
+.tweet table{
+    margin: 0;
+    padding: 0 10px;
+}
+.tweet td {
+    border-bottom: solid 2px #144668;
+    width: 100%;
+}
+.story {
+    margin: 5px 0;
+    color: black;
+}

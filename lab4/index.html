@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Lab4</title>
+    </head>
+    <body>
+        <header></header>
+        <nav>
+            <ul>
+                <li>網路攻防</li>
+                <li>參觀人數</li>
+                <li>
+                    <a href="https://www.stylemap.co.jp/">
+                        <img src="https://www.f-counter.net/j/63/1711295383/" alt="アクセスカウンター">
+                    </a>
+                    
+                </li>
+            </ul>
+            <div class="menubutton" onclick="menu()">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li onclick="about()">About</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="about">
+                    <img src="image/1.jpg" alt="my photograph">
+                    <p>
+                        hello! 我是台大的學生<br>
+                        這網頁不僅是作業<br>
+                        還是我網頁設計的練習
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="chat">
+                <div class="chatbutton" onclick="chat()">
+                    <i></i>
+                    <i></i>
+                </div>
+                <div class="message">
+                    <textarea name="post" id="post" class="post"></textarea>
+                    <button class="submit">發布</button>
+                </div>
+            </div>
+            <div class="tweet">
+                <h2>留言</h2>
+                <table></table>
+            </div>
+        </main>
+        <aside></aside>
+        <footer></footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
