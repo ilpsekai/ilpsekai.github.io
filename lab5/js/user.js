@@ -1,7 +1,7 @@
 const url = new URL(location.href); 
 const movieId = url.searchParams.get("id")
 
-const APILINK = 'https://f8f4fa41-f3f3-46d0-931f-58762a64311f-00-2xce7xarizccm.sisko.replit.dev//api/v1/reviews/';
+const APILINK = 'https://f8f4fa41-f3f3-46d0-931f-58762a64311f-00-2xce7xarizccm.sisko.replit.dev/api/v1/reviews/';
 
 const userlist = document.querySelector('.userlist')
 
