@@ -6,6 +6,8 @@ function chat() {
     document.querySelector('.chatbutton').classList.toggle('open');
     document.querySelector('.chat').classList.toggle('open');
 }
+
+
 var ul = document.querySelector('.tweet table');
 var text = document.querySelector('.post');
 var btn = document.querySelector('button')

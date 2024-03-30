@@ -5,14 +5,10 @@ const APILINK = 'https://f8f4fa41-f3f3-46d0-931f-58762a64311f-00-2xce7xarizccm.s
 
 const userlist = document.querySelector('.userlist')
 
-const button = document.querySelector('.cruser')
-button.setAttribute("onclick", "saveReview('newuser')")
-button.setAttribute("href", "#")
-
 returnReviews(APILINK);
 
 function returnReviews(url){
-fetch(url + "movie/" + movieId).then(res => res.json())
+fetch(url + "user/" + movieId).then(res => res.json())
 .then(function(data){
 console.log(data);
 data.forEach(review => {
@@ -86,3 +82,7 @@ fetch(APILINK + id, {
     location.reload();
     });    
 }
+
+const button = document.querySelector('.cruser')
+button.setAttribute("onclick", "saveReview('newuser')")
+button.setAttribute("href", "#")
